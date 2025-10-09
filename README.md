@@ -1,41 +1,95 @@
-# Senai-TCC
+# 📋 Sistema de Checklist Inteligente com IoT – TCC Senai
 
-***Esta é uma parte do TCC apresentado no curso de Técnico em Eletroeletrônica do Senai, feito por <br>
-Asaph Ingles Fonseca <br>
-Diogo Alves Ferreira <br>
-Eduardo Silvestre Padilha<br> 
-Gustavo Ferreira Farias <br>
-Ubiratan Luzia de Loureiro Junior<br>
-Agradecemos ao Professor tutor, Flávio Eduardo de Moraes, que forneceu todos os materiais de apoio, além de sua ajuda constante, e aos outros que nos auxiliaram durante esse projeto, especialmente aos professores de TI George Henrique Sato Wurthmann, o qual forneceu ajuda enquanto fazíamos a programação das placas, assim como o professor Ismael, que nos ajudou com as programações do Google Sheets***
+Projeto desenvolvido como parte do Trabalho de Conclusão de Curso do Técnico em Eletroeletrônica no SENAI, com foco em segurança operacional, manutenção preditiva e uso de tecnologias IoT para automação industrial.
 
-# Introdução
-Muitas indústrias têm problemas relacionados a acidentes por falta de preparo ou manutenção das máquinas, estes poderiam ser reduzidos com a implementação de um checklist de segurança feito antes da operação da máquina, de forma que os problemas seriam solucionados sem oferecer risco aos colaboradores que manuseiam o equipamento. A partir disso foi elaborado um produto eficiente, de baixo custo e capaz de otimizar os processos de segurança em geral das empresas. Com a implementação revolucionária do IOT, esse processo se torna mais simples, funcional e sustentável.  Além disso, o produto pode realizar a manutenção preditiva, usando como base o tempo de operação das máquinas e de gráficos que mostram os defeitos mais recorrentes, os processos de classificação através de um checklist online servem como apoio nessa etapa. Sua implementação também gera lucros devido a sua viabilidade em termos redução do tempo de parada das máquinas, baixo custo de instalação e manutenção.  
+---
+
+## 👥 Equipe
+
+- **Asaph Ingles Fonseca**  
+- **Diogo Alves Ferreira**  
+- **Eduardo Silvestre Padilha**  
+- **Gustavo Ferreira Farias**  
+- **Ubiratan Luzia de Loureiro Junior**  
+
+**Orientador:** Prof. Flávio Eduardo de Moraes  
+**Apoio Técnico:**  
+- Prof. George Henrique Sato Wurthmann (Programação das placas)  
+- Prof. Ismael (Integração com Google Sheets)
+
+---
+
+## 📌 Sobre o Projeto
+
+Este projeto propõe a implementação de um **sistema de checklist digital integrado a dispositivos IoT**, com o objetivo de aumentar a segurança na operação de máquinas industriais, reduzir riscos de acidentes e otimizar os processos de manutenção preventiva.
+
+A ideia central é utilizar microcontroladores conectados à internet para registrar e controlar a liberação de máquinas com base em um formulário de segurança (checklist), conforme exigido pela **Norma Regulamentadora NR-12**.
+
+---
+
+## 🚨 Problema de Pesquisa
+
+Com a implementação da NR-12 em máquinas como tornos, é obrigatório o preenchimento de um **checklist de liberação** antes de cada turno de trabalho. Esses dados devem ser registrados e armazenados para compor um histórico de segurança e manutenção.
+
+---
+
+## 🎯 Objetivos
+
+- Desenvolver um sistema com base em **IoT** para o preenchimento digital do checklist de liberação de máquina.
+- Integrar **indicação visual via sinaleiro**, sinalizando a liberação ou bloqueio da máquina.
+- Implementar controle de **horímetro da máquina** para realizar **manutenção preventiva**.
+- Criar um sistema **flexível**, que possa ser adaptado para diferentes máquinas ou setores industriais.
+
+---
+
+## 💡 Justificativa
+
+- Atender aos requisitos legais da **NR-12**, garantindo a segurança operacional.
+- Reduzir paradas não planejadas e acidentes, otimizando a produção.
+- Implementar um sistema de **baixo custo**, simples de operar e com grande aplicabilidade em pequenas e médias indústrias.
+
+---
+
+## 🔧 Tecnologias Utilizadas
+
+| Componente         | Finalidade |
+|--------------------|------------|
+| **ESP32**          | Microcontrolador principal com Wi-Fi e Bluetooth integrados. Usado para processar o checklist e se conectar à internet. |
+| **Arduino Nano**   | Utilizado para comunicação local com o painel de controle do torno, via Bluetooth. |
+| **Google Sheets API** | Armazenamento em nuvem dos dados dos checklists e controle de histórico. |
+| **Sinaleiros (LEDs)** | Indicação visual de liberação ou bloqueio da máquina. |
+| **Horímetro Digital** | Registro de tempo de operação da máquina para controle de manutenção. |
+
+---
+
+## 🧠 Conceitos Aplicados
+
+- **IoT (Internet das Coisas)**
+- **Automação Industrial**
+- **Manutenção Preditiva**
+- **Segurança do Trabalho (NR-12)**
+- **Comunicação Serial e Bluetooth**
+- **APIs para integração com a nuvem**
+
+---
 
 
-# Problema de pesquisa
-Com a implantação da adequação da NR12 nos tornos da oficina mecânica, dentre os requisitos legais previstas nessa norma, é necessário o preenchimento de checklist de liberação de máquina e esse checklist deve ser feito todas as vezes que se inicia o turno de trabalho, e deve ser armazenado essas informações criando assim um histórico de segurança.
+---
 
-# Objetivos
-Desenvolver um sistema baseado em IOT para o preenchimento de formulário de liberação de máquina com níveis de a liberação da máquina com indicação visual pelo sinaleiro pelo usuário, paralelamente um sistema baseado no horímetro da máquina para realizar a manutenção preventiva da máquina. Desenvolver um sistema flexível de forma que possa ser utilizado para qualquer sistema que exija checklist para liberação e até mesmo acompanhamento de manutenção.
+## ✅ Conclusões
 
-# Justificativa
-Atender os requisitos legais da NR12 no registro dos checklist de segurança e melhor acompanhamento e programações das manutenções preventivas dos tornos
+O sistema proposto mostrou-se eficaz em aumentar a segurança e controle sobre a operação de máquinas industriais, trazendo benefícios como:
+- Redução de falhas operacionais
+- Maior confiabilidade nos processos
+- Facilidade de auditoria e rastreabilidade
+- Baixo custo e alta replicabilidade
 
-# Microcontrolador ESP32
-Para atender nossa necessidade de conexão à internet e bluetooth, e para não precisarmos integrar o microcontrolador Arduino aos módulos de conexão, constatamos então que o dispositivo que melhor atenderia às nossas necessidades seria o ESP32, pois, diferente do ESP8266 este tem um núcleo de cpu extra, e com isso garante wi-fi mais rápido, mais gpios, além de suportar o bluetooth 4.3.
+---
 
-#  Arduino Nano
-A escolha da utilização do Arduino NANO foi devido à pouca necessidade de sua utilização, além da falta de espaço, já que ele só seria utilizado como transmissor e receptor bluetooth integrado no comando do torno, notificando a partida e parada da máquina.
+## 📬 Contato
 
+Se tiver interesse em saber mais sobre o projeto ou quiser colaborar, entre em contato pelo LinkedIn ou GitHub.
 
+---
 
-
-
-
-
-
-
-
-
-
-
+> 🔧 Repositório criado com fins acadêmicos e demonstrativos. Pode ser adaptado e expandido para aplicações reais.
